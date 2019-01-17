@@ -9,9 +9,31 @@
     <script src="main.js"></script>
 </head>
 <body>
+
+    
     <h1>Hola</h1>
 
     <h5>CHI CHEÑOL</h5>
+
+    <table>
+       <thead>
+         <tr>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+         </tr>
+       </thead>
+       <tbody>
+          @foreach($contactos as $contacto)
+          <tr>
+            <td>{{$contacto->nombre}}</td>
+            <td>{{$contacto->telefono}}</td>
+            <td>{{$contacto->correo}}</td>
+          </tr>
+          @endforeach
+       </tbody>
+
+    </table>
     
 </body>
 </html>
